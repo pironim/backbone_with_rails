@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: postgres
+
+development:
+  <<: *common
+  database: bwr_development
+
+test:
+  <<: *common
+  database: bwr_test
+
+production:
+  <<: *common
+  database: bwr_production
